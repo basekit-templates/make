@@ -1,0 +1,23 @@
+{% extends "layout.twig" %}
+{% block content %}
+
+<section class="page home">
+
+	{% include 'includes/header.twig' %}
+
+	<div class="wrapper clearfix">
+
+		<div class="page-content">
+			{{widget('feature', 'featurehome', {"header": "profile","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': false})|raw}}
+
+			{{zone('main')|raw}}
+			
+		</div>
+
+	</div>
+
+	{% include 'includes/footer.twig' %}
+
+</section>
+
+{% endblock %}

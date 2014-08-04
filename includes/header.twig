@@ -1,0 +1,35 @@
+<!-- Header Include !-->
+<header class="template-header">
+
+	<div class="top-container">
+
+		<div class="wrapper clearfix">
+
+				{{widget('companyaddress', 'topcompanyaddress', {})|raw}}
+
+				{{widget('profile', 'topphone', { 'profileType':'phone'})|raw}}
+
+				{{widget('profile', 'topemail', { 'profileType':'email'})|raw}}
+
+		</div>
+
+
+	</div>
+
+		<div class="wrapper clearfix">
+
+			<div class="company-info">
+				{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+
+				{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+			</div>
+
+			<div class="nav">
+				{{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
+			</div>
+
+		</div>
+
+	
+</header>
+

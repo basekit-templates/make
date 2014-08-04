@@ -1,0 +1,235 @@
+/*  ===============================
+    Colour Swatches
+    ===============================
+    "color1": == Background
+    "color2": == Contrast colour
+    "color3": == Button colour
+    "color4": == Title colour
+    "color5": == Paragraph colour
+    "color6": == Nav text colour
+    "color7": == Header BG colour
+    =============================== */
+
+/*  ===============================
+    Font Swatches
+    ===============================
+    "font1":  == Heading 1
+    "font2":  == Heading 2
+    "font3":  == Heading 3
+    "font4":  == Heading 4
+    "font5":  == Paragraph
+    "font6":  == Navigation Text
+    "font7":  == Buttons
+    "font8":  == Feature Title
+    "font9":  == Feature Subtitle
+    "font10": == Logo
+    =============================== */
+
+
+@import "@{templateCommon}/basekit-bootstrap.less";
+@import "@{templateLocal}/css/ecommerce.less";
+@import "@{templateLocal}/css/widgets.less";
+
+// -----------------------------
+// Page Settings
+// -----------------------------
+
+// Wrapper 
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    @media only screen and (min-width: 1140px) {
+    	width: 90%;
+    	margin: 0 auto;
+    }
+}
+
+ul, li {
+	margin: 0;
+}
+
+a {
+    color: @color-swatch2;
+}
+
+body {
+    background-image: image('/images/make-bg.png');
+}
+
+
+// -----------------------------
+// Header
+// -----------------------------
+
+header.template-header {
+    top: 0;
+    width: 100%;
+}
+
+//  Top container
+
+.top-container {
+    background-image: image('/images/top-container-bg.png');
+    height: 50px;
+    top: 0px;
+    margin-bottom: 15px;
+}
+
+.widget.companyaddress {
+    float: left;
+    display: inline-block;
+    height: 50px;
+    padding-top: 5px;
+
+    p {
+        color: @color-swatch1;
+        display: inline-block;
+    }
+}
+
+#topphone.widget.profile {
+    .clearfix;
+
+    @media (max-width: 850px) {
+        display: none;
+    }
+
+    &:before {
+        content: '';
+        background-image: image('/images/phone.svg');
+        background-size: 20px;
+        background-repeat: no-repeat;
+        display: block;
+        float: left;
+        width: 20px;
+        height: 20px;
+        margin-top: 15px;
+        padding-right: 8px;
+        }
+    display: inline-block;
+    float: right;
+    span {
+        color: @color-swatch1;
+        float: right;
+        margin-top: 6px;
+    }
+
+}
+
+#topemail.widget.profile {
+    .clearfix;
+    width: 225px;
+    display: inline-block;
+    float: right;
+    margin-right: 16px;
+
+    @media (max-width: 850px) {
+        display: none;
+    }
+
+    &:before {
+        content: '';
+        background-image: image('/images/mail.svg');
+        background-size: 20px;
+        background-repeat: no-repeat;
+        display: block;
+        float: left;
+        width: 20px;
+        height: 20px;
+        margin-top: 14px;
+        padding-right: 8px;
+        }
+    a {
+        color: @color-swatch1;
+        display: inline-block;
+        margin-top: 6px;
+    }
+
+}
+
+.company-info {
+    float: left;
+    margin-top: 15px;
+    width: 45%;
+}
+
+.widget.companyname {
+    float: left;
+}
+
+.widget.logo {
+    float: left;
+    margin: -8px 5px 0 0;
+}
+
+// nav
+
+.nav {
+    float: right;
+    max-width: 55%;
+
+    @media (max-width: 960px) {
+        max-width: 100%;
+    }
+
+    @media @tablet {
+        max-width: 100%;
+        margin-top: 55px;
+    }
+}
+
+.widget .extendednavigation ul li a,
+.widget .extendednavigation ul li.folder .text {
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+
+// -----------------------------
+// Feature
+// -----------------------------
+
+.widget.feature {
+
+    .feature-bgimg .content {
+        padding-top: 22%;
+    }
+
+    .feature-bgimg .content .spare {
+        background-color: hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(@color-swatch7), 0.9);
+        width: 50%;
+        float: right;
+        padding: 30px;
+        text-transform: uppercase;
+    }
+
+    h3 {
+        font-weight: @font-swatch2-font-weight;
+    }
+
+
+}
+
+
+
+
+// -----------------------------
+// Page Content
+// -----------------------------
+.page-content {
+
+}
+
+.widget.content {
+    margin-top: 60px;
+}
+
+// -----------------------------
+// Footer
+// -----------------------------
+
+footer.template-footer {
+	
+}
