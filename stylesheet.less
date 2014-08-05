@@ -34,7 +34,18 @@
 // Page Settings
 // -----------------------------
 
-// Wrapper 
+// Wrapper
+
+.head-container {
+    width: 100%;
+/*    margin: 0 auto;*/
+    background-color: @color-swatch1;
+/*    @media only screen and (min-width: 1140px) {
+        width: 90%;
+        margin: 0 auto;
+    }*/
+}
+
 .wrapper {
     width: 90%;
     margin: 0 auto;
@@ -72,7 +83,6 @@ header.template-header {
     background-image: image('/images/top-container-bg.png');
     height: 50px;
     top: 0px;
-    margin-bottom: 15px;
 }
 
 .widget.companyaddress {
@@ -162,7 +172,11 @@ header.template-header {
     margin: -8px 5px 0 0;
 }
 
-// nav
+// -----------------------------
+// Extended Navigation
+// -----------------------------
+
+// Nav
 
 .nav {
     float: right;
@@ -175,8 +189,11 @@ header.template-header {
     @media @tablet {
         max-width: 100%;
         margin-top: 55px;
+        float: none;
     }
 }
+
+// Hover
 
 .widget .extendednavigation ul li a,
 .widget .extendednavigation ul li.folder .text {
@@ -185,6 +202,56 @@ header.template-header {
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
+
+// Extended Navigation
+
+.widget .extendednavigation {
+
+    ul {
+        @media @tablet {
+            padding-top: 0;
+        }
+    }
+
+    ul li {
+        &.folder {
+            &:after {
+                background-image: image('/images/nav-cross.svg');
+                border: 0;
+                background-repeat: no-repeat;
+                background-size: 9px;
+                width: 10px;
+                height: 10px;
+                right: 0;
+            }
+        }
+
+        @media @tablet {
+            padding: 0;
+            padding-top: 0;
+
+            &:hover ul {
+                margin: 1px 0 0;
+            }
+        }
+    }
+
+    a.pull {
+
+        top: -33px;
+
+        &:after {
+            background: #333333;
+            box-shadow: 0 6px 0 #333333, 0 12px 0 #333333;
+            width: 30px;
+            height: 4px;
+            border-radius: 3px;
+
+        }
+    }
+
+}
+
 
 
 // -----------------------------
@@ -203,6 +270,9 @@ header.template-header {
         float: right;
         padding: 30px;
         text-transform: uppercase;
+        @media @tablet {
+            width: 75%;
+        }
     }
 
     h3 {

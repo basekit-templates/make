@@ -1,8 +1,8 @@
 {
 	"name":"Make",
-	"thumbnail":"particle.png",
-	"screenshot":"particle.png",
-    "tags": { "en": ["business", "clean", "corporate"] },
+	"thumbnail":"make.png",
+	"screenshot":"make.png",
+    "tags": { "en": ["construction", "freelance", "windows"] },
     "pageTypes":["home"],
     "templateType":"standard",
     "colorSwatches":
@@ -22,7 +22,7 @@
             "color3":"#02c796",
             "color4":"#333333",
             "color5":"#666666",
-            "color6":"#ffffff",
+            "color6":"#333333",
             "color7":"#f1f1f1"
         },
         "Swatch 3": {
@@ -31,7 +31,7 @@
             "color3":"#0b86ba",
             "color4":"#333333",
             "color5":"#666666",
-            "color6":"#ffffff",
+            "color6":"#333333",
             "color7":"#f1f1f1"
         }
     },

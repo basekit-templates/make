@@ -1,4 +1,58 @@
 {% extends "layout.twig" %}
 {% block content %}
 
+<section class="page home">
+
+	<header class="template-header">
+
+	<div class="top-container">
+
+		<div class="wrapper clearfix">
+
+				{{widget('companyaddress', 'topcompanyaddress', {})|raw}}
+
+				{{widget('profile', 'topphone', { 'profileType':'phone'})|raw}}
+
+				{{widget('profile', 'topemail', { 'profileType':'email'})|raw}}
+
+		</div>
+
+
+	</div>
+
+		<div class="head-container">
+
+			<div class="wrapper clearfix">
+
+				<div class="company-info">
+					{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+
+					{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+				</div>
+
+				<div class="nav">
+					{{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
+				</div>
+
+			</div>
+
+		</div>
+
+</header>
+
+
+	<div class="wrapper clearfix">
+
+		<div class="page-content">
+
+			{{zone('main')|raw}}
+
+		</div>
+
+	</div>
+
+	{% include 'includes/footer.twig' %}
+
+</section>
+
 {% endblock %}
