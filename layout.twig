@@ -2,18 +2,18 @@
 <html lang="{{ page.seoLang }}">
 
 	<head>
-	
+
 		{% include 'includes/head.twig' %}
-		
+
 		{% include basekit.headScript %}
 
 	</head>
 
 	<body class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
-				
+
 		{% block content %}
 		{% endblock %}
-			
+
 		{% include basekit.bodyScript %}
 
 		<script type="text/javascript">
@@ -26,4 +26,5 @@
 		</script>
 
 	</body>
+
 </html>
