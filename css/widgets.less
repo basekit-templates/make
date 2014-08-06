@@ -375,20 +375,25 @@ button.btn,
 // Social Icons
 // -----------------------------
 
+.widget.profile .bk-profile-socialicons a {
+	text-indent: 9999px;
+	overflow: hidden;
+}
+
 // Zone
 .widget.socialicons {
 	.clearfix;
 	span {
 
 		&:first-child {
-			a { 
-				margin-left: 0; 
+			a {
+				margin-left: 0;
 				padding-left: 0;
 			}
 		}
 		&:last-child {
-			a { 
-				margin-right: 0; 
+			a {
+				margin-right: 0;
 				padding-right: 0;
 			}
 		}
@@ -562,56 +567,6 @@ button.btn,
 		min-height: 250px;
 	}
 }
-
-/*// -----------------------------
-// Gallery
-// -----------------------------
-
-.widget.gallery {
-	margin: 20px 0 20px 0;
-	ul li {
-		@media @tablet {
-			width: 50%;
-			padding-bottom: 50%;
-		}
-		@media @mobile {
-			width: 100%;
-			padding-bottom: 100%;
-		}
-
-		span.inner {
-			left: 0px;
-			right: 0px;
-			bottom: 0px;
-			.title,
-			.description {
-				margin-bottom: -57px;
-			} 
-			.title:hover {
-				margin-bottom: 0;
-			}
-			.title {
-				right: inherit;
-			}
-			a .title {
-				width: 94%;
-				border-right: 3px solid @color-swatch2;
-				background-color: @color-swatch1;
-				color: @font-swatch4-color;
-				font-family: @font-swatch4-font-family;
-				font-size: @font-swatch4-font-size;
-				font-weight: 600;
-				line-height: @font-swatch4-line-height;
-				letter-spacing: @font-swatch4-letter-spacing;
-				text-align: left;
-
-			}
-			a:hover .title {
-				margin-bottom: 20px;
-			}
-		}
-	}
-}*/
 
 // -----------------------------
 // Gallery

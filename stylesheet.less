@@ -38,12 +38,8 @@
 
 .head-container {
     width: 100%;
-/*    margin: 0 auto;*/
+    padding: 20px 0 20px 0;
     background-color: @color-swatch1;
-/*    @media only screen and (min-width: 1140px) {
-        width: 90%;
-        margin: 0 auto;
-    }*/
 }
 
 .wrapper {
@@ -80,6 +76,7 @@ header.template-header {
 //  Top container
 
 .top-container {
+    .clearfix;
     background-image: image('/images/top-container-bg.png');
     height: 50px;
     top: 0px;
@@ -252,8 +249,6 @@ header.template-header {
 
 }
 
-
-
 // -----------------------------
 // Feature
 // -----------------------------
@@ -278,12 +273,7 @@ header.template-header {
     h3 {
         font-weight: @font-swatch2-font-weight;
     }
-
-
 }
-
-
-
 
 // -----------------------------
 // Page Content
@@ -293,12 +283,20 @@ header.template-header {
 }
 
 .widget.content {
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 // -----------------------------
 // Footer
 // -----------------------------
+
+.pre-footer {
+    background-image: image('/images/top-container-bg.png');
+    min-height: 200px;
+    width: 100%;
+    margin-bottom: -16px;
+    padding: 20px 10% 30px 10%;
+}
 
 footer.template-footer {
     padding: 4em 0;
@@ -311,4 +309,9 @@ footer.template-footer {
     font-size:bkscale(@font-swatch2-font-size, 0.9);
     padding-bottom: 20px;
     }
+}
+
+.responsivecolumns .columns-two-right,
+.columns-two-50-50 .columns-two-right {
+    text-align: right;
 }

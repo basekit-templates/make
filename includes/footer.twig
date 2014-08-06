@@ -1,5 +1,41 @@
 <!-- Footer Include !-->
+<div class="pre-footer">
+	<div class="wrapper">
+        <div class="responsivecolumns columns-two-50-50">
+            <div class="column columns-two-left">
+                {{widget('content', 'prefootercolumn1content1', {"content":"<h2>Lorem Ip Soda</h2>"})|raw}}
+
+                {{widget('content', 'prefootercolumn1content1', {"content":"<p>Lorem Ip SodaLorem Ip SodaLorem Ip SodaLorem Ip Soda</p>"})|raw}}
+            </div>
+            <div class="column columns-two-right">
+
+                {{widget('content', 'prefootercolumn1content1', {"content":"<h2>Lorem Ip Soda</h2>"})|raw}}
+
+                {{widget('content', 'prefootercolumn1content1', {"content":"<p>Lorem Ip SodaLorem Ip SodaLorem Ip SodaLorem Ip Soda</p>"})|raw}}
+
+            </div>
+        </div>
+    </div>
+</div>
+
 <footer class="template-footer">
-	
+	<div class="wrapper">
+	      <div class="responsivecolumns columns-two-50-50">
+            <div class="column columns-two-left">
+                {{widget('content', 'footercolumn1content1', {"content":"<h2>Lorem Ip Soda</h2>"})|raw}}
+
+                {{widget('profile', 'footercolumn1profileaddress', { 'profileType':'address', 'address':'profile'})|raw}}
+            </div>
+            <div class="column columns-two-right">
+
+                {{widget('content', 'footercolumn2content1', {"content":"<h2>Lorem Ip Soda</h2>"})|raw}}
+
+                {{widget('profile', 'footcolumn2profilecopyright', { 'profileType':'copyright', 'copyright':'profile'})|raw}}
+
+                {{widget('profile', 'footcolumn2profilesocialicons', { 'profileType' : 'socialicons' })|raw}}
+
+            </div>
+        </div>
+	</div>
 </footer>
 
