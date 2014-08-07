@@ -11,9 +11,10 @@
 
 				{{widget('companyaddress', 'topcompanyaddress', {})|raw}}
 
-				{{widget('profile', 'topphone', { 'profileType':'phone'})|raw}}
-
-				{{widget('profile', 'topemail', { 'profileType':'email'})|raw}}
+				<ul>
+					<li class="top-profile">{{widget('profile', 'topphone', { 'profileType':'phone'})|raw}}</li>
+					<li class="top-profile">{{widget('profile', 'topemail', { 'profileType':'email'})|raw}}</li>
+				</ul>
 
 		</div>
 

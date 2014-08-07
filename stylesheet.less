@@ -71,6 +71,10 @@ body {
 header.template-header {
     top: 0;
     width: 100%;
+    margin-bottom: 20px;
+    ul {
+        float: right;
+    }
 }
 
 //  Top container
@@ -78,30 +82,31 @@ header.template-header {
 .top-container {
     .clearfix;
     background-image: image('/images/top-container-bg.png');
-    height: 50px;
-    top: 0px;
 }
 
 .widget.companyaddress {
-    float: left;
-    display: inline-block;
-    height: 50px;
     padding-top: 5px;
-
+    float: left;
+    line-height: normal;
     p {
-        color: @color-swatch1;
         display: inline-block;
+        color: @color-swatch1;
     }
 }
 
-.bk-profile-phone {
-    .clearfix;
-    color: @color-swatch1;
-    float: right;
-    margin-top: 6px;
-    display: inline-block;
-    float: right;
+// Profile Widgets
 
+.top-profile {
+    color: @color-swatch1;
+    display: inline-block;
+    line-height: normal;
+    margin-left: 30px;
+    vertical-align: middle;
+}
+
+
+
+.bk-profile-phone {
     &:before {
         content: '';
         background-image: image('/images/phone.svg');
@@ -111,33 +116,22 @@ header.template-header {
         float: left;
         width: 20px;
         height: 20px;
-        margin-top: 15px;
         padding-right: 8px;
-        }
+    }
     span {
         color: @color-swatch1;
-        float: right;
-        margin-top: 6px;
     }
-        @media (max-width: 850px) {
-        display: none;
+    @media @tablet {
+        text-align: center;
     }
-
 }
 
 .bk-profile-email {
-    .clearfix;
-    width: 225px;
-    display: inline-block;
-    float: right;
-    margin-right: 16px;
-
-    @media (max-width: 850px) {
-        display: none;
+    @media @tablet{
+        text-align: center;
     }
 
     &:before {
-        .clearfix;
         content: '';
         background-image: image('/images/mail.svg');
         background-size: 20px;
@@ -146,13 +140,12 @@ header.template-header {
         float: left;
         width: 20px;
         height: 20px;
-        margin-top: 14px;
         padding-right: 8px;
         }
     a {
         color: @color-swatch1;
         display: inline-block;
-        margin-top: 6px;
+        // margin-top: 6px;
     }
 
 }
