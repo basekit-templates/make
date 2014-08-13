@@ -25,7 +25,6 @@
     "font10": == Logo
     =============================== */
 
-
 @import "@{templateCommon}/basekit-bootstrap.less";
 @import "@{templateLocal}/css/ecommerce.less";
 @import "@{templateLocal}/css/widgets.less";
@@ -62,7 +61,6 @@ a {
 body {
     background-image: image('/images/make-bg.png');
 }
-
 
 // -----------------------------
 // Header
@@ -113,7 +111,7 @@ header.template-header {
     padding-top: 15px;
 }
 
-
+    // Phone
 
 .bk-profile-phone {
     &:before {
@@ -135,6 +133,8 @@ header.template-header {
     }
 }
 
+    // Email
+
 .bk-profile-email {
     @media @tablet{
         text-align: center;
@@ -154,10 +154,27 @@ header.template-header {
     a {
         color: @color-swatch1;
         display: inline-block;
-        // margin-top: 6px;
+    }
+}
+
+    // Twitter
+
+.widget.profile ul.twitter {
+    width: 300px;
+}
+
+.twitter-content {
+
+    a {
+    display: none;
     }
 
+    p {
+        color: @color-swatch1;
+    }
 }
+
+    // Company Info
 
 .company-info {
     float: left;
@@ -250,10 +267,8 @@ header.template-header {
             width: 30px;
             height: 4px;
             border-radius: 3px;
-
         }
     }
-
 }
 
 // -----------------------------
