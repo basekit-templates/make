@@ -69,10 +69,14 @@ body {
 header.template-header {
     top: 0;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     ul {
         float: right;
         padding: 0;
+        @media @tablet {
+            text-align: center;
+            float: none;
+        }
     }
 }
 
@@ -90,6 +94,10 @@ header.template-header {
     padding-top: 5px;
     float: left;
     line-height: normal;
+    @media @tablet {
+        float: none;
+        text-align: center;
+    }
     p {
         display: inline-block;
         color: @color-swatch1;
@@ -109,6 +117,9 @@ header.template-header {
     margin-left: 30px;
     float: left;
     padding-top: 15px;
+    @media @tablet {
+        float: none;
+    }
 }
 
     // Phone
@@ -138,6 +149,7 @@ header.template-header {
 .bk-profile-email {
     @media @tablet{
         text-align: center;
+        display: inline-block;
     }
 
     &:before {
@@ -298,16 +310,6 @@ header.template-header {
     }
 }
 
-// -----------------------------
-// Page Content
-// -----------------------------
-.page-content {
-
-}
-
-.widget.content {
-    margin-top: 30px;
-}
 
 // -----------------------------
 // Footer
@@ -329,4 +331,14 @@ footer.template-footer {
 .responsivecolumns .columns-two-right,
 .columns-two-50-50 .columns-two-right {
     text-align: right;
+    @media @tablet {
+        text-align: center;
+    }
+}
+
+.responsivecolumns .columns-two-left,
+.columns-two-50-50 .columns-two-left {
+    @media @tablet {
+        text-align: center;
+    }
 }

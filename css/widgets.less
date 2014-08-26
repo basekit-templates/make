@@ -47,6 +47,8 @@ textarea,
 	box-shadow: 0px 3px 0px 0px @color-swatch4;
 	-webkit-appearance: none;
 	-moz-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
 	&:focus {
 		border-color: @color-swatch2;
 	}
@@ -73,7 +75,7 @@ textarea,
 	@media @mobile {
 		border-left: 0;
 		border-right: 0;
-		padding: 20px 0px 40px;
+		padding: 20px 20px 40px;
 		margin: 30px 0;
 	}
 	fieldset {
@@ -94,6 +96,8 @@ textarea,
 	}
 	input {
 		background-color: @color-swatch1;
+		-webkit-border-radius: 0;
+		border-radius: 0;
 	}
 	label {
 		font-family: @font-swatch4-font-family;
@@ -125,6 +129,9 @@ textarea,
 		margin-right: 10px;
 		font-size: 15px;
 		text-indent: 0;
+		border-radius: 0;
+		-webkit-border-radius: 0;
+    	border-radius: 0;
 		@media @mobile {
 			width: 100%;
 		}
@@ -155,6 +162,7 @@ p.address2,
 p.country,
 p.postal-code {
 	color: @color-swatch1;
+	display: inline;
 }
 
 // -----------------------------
@@ -183,19 +191,19 @@ button.btn,
 .ecombasket-checkout-link,
 .widget.ecomcheckout .checkout-order-button,
 .blog-list-footer a {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, @color-swatch2), color-stop(1, color-swatch3));
-	background:-moz-linear-gradient(top, @color-swatch2 5%, @color-swatch3 100%);
-	background:-webkit-linear-gradient(top, @color-swatch2 5%, @color-swatch3 100%);
-	background:-o-linear-gradient(top, @color-swatch2 5%, @color-swatch3 100%);
-	background:-ms-linear-gradient(top, @color-swatch2 5%, @color-swatch3 100%);
-	background:linear-gradient(to bottom, @color-swatch2 5%, @color-swatch3 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ec6b2f', endColorstr='#c95b28',GradientType=0);
-	background-color:@color-swatch2;
-	border:1px solid @color-swatch3;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, lighten(@color-swatch3,7%)), color-stop(1, color-swatch3));
+	background:-moz-linear-gradient(top, lighten(@color-swatch3,7%) 5%, @color-swatch3 100%);
+	background:-webkit-linear-gradient(top, lighten(@color-swatch3,7%) 5%, @color-swatch3 100%);
+	background:-o-linear-gradient(top, lighten(@color-swatch3,7%) 5%, @color-swatch3 100%);
+	background:-ms-linear-gradient(top, lighten(@color-swatch3,7%) 5%, @color-swatch3 100%);
+	background:linear-gradient(to bottom, lighten(@color-swatch3,7%) 5%, @color-swatch3 100%);
+	// filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ec6b2f', endColorstr='#c95b28',GradientType=0);
+	background-color: @color-swatch3;
+	border: @color-swatch3;
 	display:inline-block;
 	cursor:pointer;
 	color:@color-swatch1;
-	padding:6px 24px;
+	padding: 6px 24px;
 	height: 44px;
 
 	// Font
@@ -236,16 +244,16 @@ button.btn,
 }
 
 .widget.paypalbuynow .widget.button.paypal {
-	background-image: image('/images/basket.svg');
-	background-position: 9px center;
-	background-size: 25px;
-	background-repeat: no-repeat;
-	&:hover {
-		background-image: image('/images/basket.svg');
-		background-position: 6px center;
-		background-size: 25px;
-		background-repeat: no-repeat;
-	}
+	// background-image: image('/images/basket.svg');
+	// background-position: 9px center;
+	// background-size: 25px;
+	// background-repeat: no-repeat;
+	// &:hover {
+	// 	background-image: image('/images/basket.svg');
+	// 	background-position: 6px center;
+	// 	background-size: 25px;
+	// 	background-repeat: no-repeat;
+	// }
 }
 
 // Tweet
@@ -291,35 +299,6 @@ button.btn,
 			content: '\2190';
 			margin-right: 10px;
 		}
-	}
-}
-
-// Click to Call
-.clicktocall a {
-	@media @mobile {
-		background-image: image('/images/ic-phone.svg');
-		text-transform: uppercase; // Remove
-		padding: 8px 14px;
-		background-color: @color-swatch1;
-		background-size: 18px;
-		box-shadow:4px 4px 0 @color-swatch1, 6px 6px 0 @color-swatch2;
-		color: @font-swatch7-color;
-		font-family: @font-swatch7-font-family;
-		font-size: @font-swatch7-font-size;
-		font-weight: @font-swatch7-font-weight;
-		line-height: @font-swatch7-line-height;
-		letter-spacing: @font-swatch7-letter-spacing;
-		-webkit-font-smoothing: initial;
-		&:hover {
-			background-color: @color-swatch2;
-			color: @color-swatch1;
-		}
-	}
-}
-// Overrides
-.widget.clicktocall a {
-	@media @mobile {
-		border: 2px solid @color-swatch2;
 	}
 }
 
@@ -442,7 +421,7 @@ button.btn,
 // -----------------------------
 
 .widget.responsiveslideshow {
-	.btn-play, &:hover span.btn-play, 
+	.btn-play, &:hover span.btn-play,
 	.title, .description {
 		display: none;
 	}
@@ -494,7 +473,7 @@ button.btn,
 			&.selected {
 				background-color: transparent;
 				border: 1px solid @color-swatch2;
-			} 
+			}
 			&:hover {
 				background-color: @color-swatch2;
 				border: 1px solid @color-swatch2;

@@ -1,5 +1,5 @@
 // -----------------------------
-// Ecommerce 
+// Ecommerce
 // -----------------------------
 
 // Shame
@@ -117,6 +117,17 @@
 	select[name="displayCount"] {
 	    margin-bottom: 0;
 	}
+}
+
+// Hides *custom* dropdown arrow in Firefox 30 and above
+@supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) {
+    .widget.ecomproductslist .productlist-filter,
+    .widget.ecomcheckout .delivery,
+    .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation {
+        & select {
+            background-image: none;
+        }
+    }
 }
 
 // Product Filter
@@ -671,10 +682,9 @@
 		// Added
 		&.added {
 			background-image: image('/images/ic-tick.svg');
-			background-color: @color-swatch1;
 			background-size: 20px;
-			border-color: #45D645;
-			box-shadow: none;
+            border: none;
+            text-shadow: none;
 			&:hover {
 				color: @color-swatch4;
 			}
