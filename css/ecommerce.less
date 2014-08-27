@@ -88,9 +88,6 @@
 		height: 35px;
 		margin-bottom: 12px;
 	    padding: 8px 33px 8px 8px;
-	    -webkit-appearance: none;
-	    -moz-appearance: none;
-	    background-image: image('/images/select-arrow.svg');
 	    background-repeat: no-repeat;
 	    background-size: 15px;
 	    background-position-x: 93%;
@@ -123,6 +120,7 @@
 @supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) {
     .widget.ecomproductslist .productlist-filter,
     .widget.ecomcheckout .delivery,
+    .widget ,.ecom-product-variation,
     .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation {
         & select {
             background-image: none;
@@ -164,6 +162,7 @@
         color: @color-swatch4;
 		line-height: @font-swatch4-line-height;
 		font-weight: normal;
+        display: block;
     }
   	select, .delivery select {
     	height: 44px;
@@ -633,23 +632,18 @@
 	}
 	// Select
 	.ecom-product-info .ecom-product-variation select {
-		display: block;
-		width: auto;
-    	height: 35px;
-    	margin-bottom: 12px;
+        height: 35px;
+        margin-bottom: 12px;
         padding: 8px 33px 8px 8px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        background-image: image('/images/select-arrow.svg');
         background-repeat: no-repeat;
         background-size: 15px;
         background-position-x: 93%;
         background-position-y: 55%;
-		-webkit-border-radius: 0;
-		-moz-border-radius: 0;
-		border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
         border: 1px solid darken(@color-swatch1,10%);
-        background-color: @color-swatch1;
+        background-color: darken(@color-swatch1,4%);
         text-indent: 0.01px;
         text-overflow: '';
         color: @color-swatch5;
